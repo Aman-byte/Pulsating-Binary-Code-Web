@@ -1,0 +1,40 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matrix {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.number-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.number {
+  color: white;
+  font-size: 20px;
+  animation: fall 1s linear infinite;
+  position: absolute;
+  top: -50px;
+  left: calc(100% * (1 - (Math.random() * 2)) / 2);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
